@@ -2,7 +2,7 @@ import requests,urllib,os,json
 from twilio.twiml.messaging_response import *
 from flask import *
 bot = Flask(__name__)
-@bot.route('/', methods=['POST'])
+@bot.route('/', methods=['POST','GET'])
 def simi():
 	balas = MessagingResponse()
 	chat = request.form.get('Body')
